@@ -21,7 +21,6 @@ namespace simple_crud_net_6.Data
         {
             var user = context.Users.Find(id);
             context.Users.Remove(user);
-            context.SaveChanges();
         }
 
         public IEnumerable<User> getAll()
@@ -41,7 +40,6 @@ namespace simple_crud_net_6.Data
 
         public void update(User user)
         {
-            context.SaveChanges();
         }
     }
 }

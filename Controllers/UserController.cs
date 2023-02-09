@@ -54,6 +54,7 @@ namespace simple.crud.Controllers
                 data.username = user.username;
             }
             repository.update(user);
+            repository.saveChanges();
             return Ok("Success Update Data");
         }
 
@@ -61,6 +62,7 @@ namespace simple.crud.Controllers
         public IActionResult delete(int id)
         {
             repository.delete(id);
+            repository.saveChanges();
             return Ok("Deleted");
         }
     }
